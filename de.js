@@ -1,0 +1,65 @@
+quiz = [
+  {Q:"Four identical particles of equal masses 1kg made to move along the circumference of a circle of radius 1 m under the action of their own mutual gravitational attraction. The speed of each particle will be",
+   A: a.innerHTML = `<math xmlns="http://www.w3.org/1998/Math/MathML">
+   <msqrt>
+     <mfrac>
+       <mrow>
+         <mo stretchy="false">(</mo>
+         <mn>1</mn>
+         <mo>+</mo>
+         <mn>2</mn>
+         <msqrt>
+           <mn>2</mn>
+         </msqrt>
+         <mo stretchy="false">)</mo>
+         <mi>G</mi>
+       </mrow>
+       <mn>2</mn>
+     </mfrac>
+   </msqrt>
+ </math>`, },
+]
+
+quizno = 0
+const answers= document.querySelectorAll(".answer")/*name*/
+const submitbtn = document.getElementById("submit")
+const q = document.getElementById('q11')
+const a_opt = document.getElementById("a_text")
+
+/* for deselecting */
+const deselect = () => {
+  answers.forEach((ans) => (ans.checked=false));
+};
+
+/* for selecting answers */
+const select = () => {
+  let answer;
+  answers.forEach((answerElement) => {
+    if (answerElement.checked) answer = answerElement.id;
+  });
+  return answer;
+};
+
+const loadQuiz = () => {
+  a_opt.innerHTML = quiz.A;
+};
+
+loadQuiz();
+
+submitbtn.addEventListener('click',() => {
+  const answer= select();
+  console.log(answer);
+  if(answer){
+    if(answer==quiz[quizno].question){
+          q.innerHTML = `
+          <h2>THE ANSWER IS RIGHT</h2>
+          <button onclick="history.go(0)">PLAY AGAIN</button>
+          `;
+    }else{
+       q.innerHTML =`
+       <h2>THE ANSWER IS WRONG</h2>
+       <button onclick="history.go(0)">PLAY AGAIN</button>
+       `;
+    }
+   }
+});
