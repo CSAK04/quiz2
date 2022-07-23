@@ -24,7 +24,8 @@ const select = () => {
 };
 
 const loadQuiz = () => {
-  a_opt.innerText = quiz.A;
+  const aquiz = quiz[quizno];
+  a_opt.innerText = aquiz.A;
 };
 
 loadQuiz();
