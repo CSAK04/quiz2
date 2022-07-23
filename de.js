@@ -1,7 +1,7 @@
 quiz = [
   {Q:"Four identical particles of equal masses 1kg made to move along the circumference of a circle of radius 1 m under the action of their own mutual gravitational attraction. The speed of each particle will be",
    A: "HLLO",
-   B:"HAI",},
+   B: "HAI",},
 ]
 
 quizno = 0
