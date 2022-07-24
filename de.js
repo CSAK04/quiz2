@@ -3,7 +3,9 @@ quiz = [
    A: "HLLO",
    B: "HAI",
    C: "FFG",
-   D: "FGT",},
+   D: "FGT",
+   ans: A,
+  },
 ]
 
 quizno = 0
@@ -43,7 +45,7 @@ submitbtn.addEventListener('click',() => {
   const answer= select();
   console.log(answer);
   if(answer){
-    if(answer==quiz[quizno].A){
+    if(answer==quiz[quizno].ans){
           q.innerHTML = `
           <h2>THE ANSWER IS RIGHT</h2>
           <button onclick="history.go(0)">PLAY AGAIN</button>
