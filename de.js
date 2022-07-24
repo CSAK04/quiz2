@@ -4,7 +4,7 @@ quiz = [
    B: "HAI",
    C: "FFG",
    D: "FGT",
-   ans: A,
+   ans: "A",
   },
 ]
 
