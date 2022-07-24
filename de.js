@@ -12,6 +12,7 @@ quizno = 0
 const answers= document.querySelectorAll(".answer")/*name*/
 const submitbtn = document.getElementById("submit")
 const q = document.getElementById('q11')
+const quest = document.getElementById("question")
 const a_opt = document.getElementById("a_text")
 const b_opt = document.getElementById("b_text")
 const c_opt = document.getElementById("c_text")
@@ -33,6 +34,7 @@ const select = () => {
 
 const loadQuiz = () => {
   const aquiz = quiz[quizno];
+  quest.innerText = aquiz.Q;
   a_opt.innerText = aquiz.A;
   b_opt.innerText = aquiz.B;
   c_opt.innerText = aquiz.C;
