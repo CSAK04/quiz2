@@ -41,7 +41,7 @@ submitbtn.addEventListener('click',() => {
   const answer= select();
   console.log(answer);
   if(answer){
-    if(answer==quiz[quizno].question){
+    if(answer==quiz[quizno].A){
           q.innerHTML = `
           <h2>THE ANSWER IS RIGHT</h2>
           <button onclick="history.go(0)">PLAY AGAIN</button>
